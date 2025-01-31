@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pompompurin</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .note {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .buttons button#forgive {
+            background-color: #5bcf4b;
+            color: rgb(161, 226, 144);
+        }
+        .buttons button#not-forgive {
+            background-color: #f80000;
+            color: rgb(71, 2, 2);
+        }
+        .response {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        .hearts {
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Asegúrate de que el archivo se llame "pompom.jpg" -->
+        <img src="images/purin.jpg" alt="Purin">
+        <div class="note">peldon bri te amo mucho 😭</div>
+        <div class="buttons">
+            <button id="forgive">Perdonar 😻</button>
+            <button id="not-forgive">No Perdonar 😼</button>
+        </div>
+        <div class="response" id="response"></div>
+    </div>
+
+    <script>
+        document.getElementById('forgive').addEventListener('click', function() {
+            document.getElementById('response').innerHTML = '<span class="hearts">💗</span> Te amo <span class="hearts">💗</span>';
+        });
+
+        document.getElementById('not-forgive').addEventListener('click', function() {
+            document.getElementById('response').innerHTML = 'Okei ☹️🖕🏿';
+        });
+    </script>
+</body>
+</html>
